@@ -9,16 +9,6 @@
                 var age = document.myForm.age.value;
                 alert(age > 65);
             }
-            function multiply(){
-                var num1 = document.calculator.num1.value;
-                var num2 = document.calculator.num2.value;
-                document.getElementById("output").innerHTML = num1 * num2;
-            }
-            function divide(){
-                var num1 = document.calculator.num1.value;
-                var num2 = document.calculator.num2.value;
-                document.getElementById("output").innerHTML = num1 / num2;
-            }
             function add(){
                 var num1 = document.calculator.num1.value;
                 var num2 = document.calculator.num2.value;
@@ -29,6 +19,16 @@
                 var num1 = document.calculator.num1.value;
                 var num2 = document.calculator.num2.value;
                 document.getElementById("output").innerHTML = num1 - num2;
+            }
+            function multiply(){
+                var num1 = document.calculator.num1.value;
+                var num2 = document.calculator.num2.value;
+                document.getElementById("output").innerHTML = num1 * num2;
+            }
+            function divide(){
+                var num1 = document.calculator.num1.value;
+                var num2 = document.calculator.num2.value;
+                document.getElementById("output").innerHTML = num1 / num2;
             }
         </script>
         <style>
@@ -51,10 +51,10 @@
         <form name="calculator">
             <input type="number" name="num1"/>
             <input type="number" name="num2"/>
+            <input type="button" value="Add" onclick="add()"/>
+            <input type="button" value="Subtract" onclick="subtract()"/>
             <input type="button" value="Multiply" onclick="multiply()"/>
             <input type="button" value="Divide" onclick="divide()"/>
-            <input type="button" value="Addition" onclick="add()"/>
-            <input type="button" value="Subtraction" onclick="subtract()"/>
         </form>
         <h4>Output:</h4>
         <p id="output"></p>
